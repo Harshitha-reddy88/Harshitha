@@ -1,0 +1,41 @@
+<html>
+   <head>
+       <title>form page</title>
+       <style>
+          .firstname{
+             margin-bottom:20px;
+             padding:5px 30px 5px 5px;
+          }
+          .lastname{
+             margin-bottom:20px;
+             padding:5px 30px 5px 5px;
+          }
+       </style>
+   </head>
+   <body>
+      <div>
+         <input class="firstname" type="text" placeholder="First Name">
+      </div>
+      
+      <div>
+         <input class="lastname" type="text" placeholder="Last Name">
+      </div>
+      <div>
+         <button class="btn">CLICK ME</button>
+      </div>
+      <div class="data"></div>
+   </body>
+   <script>
+       let datadiv=document.querySelector(".data");
+       let button=document.querySelector(".btn");
+       button.onclick=function(){
+           let firstname=document.querySelector(".firstname").value;
+           let lastname=document.querySelector(".lastname").value;
+           let divtag=document.createElement("div");
+           let divtag1=document.createElement("div");
+           divtag.append(firstname);
+           divtag1.append(lastname);
+           datadiv.append(divtag,divtag1);
+       }
+   </script>
+</html>
